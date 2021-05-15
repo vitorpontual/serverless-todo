@@ -11,9 +11,6 @@ export const handle: APIGatewayProxyHandler = async (event) => {
   }).promise()
 
   const  todo = response.Items.find(todo => todo.id === todo_id)
-
-  
-  console.log(todo)
   
   return {
     statusCode: 200,
